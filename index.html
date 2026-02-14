@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone | Premium UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="navbar" class="nav">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" class="nav__logo" alt="Netflix">
+        <div class="nav__links">
+            <a href="#">Home</a>
+            <a href="#">TV Shows</a>
+            <a href="#">Movies</a>
+            <a href="#">New & Popular</a>
+        </div>
+    </nav>
+
+    <header id="hero" class="hero">
+        <div class="hero__vignette"></div>
+        <div class="hero__contents">
+            <h1 id="hero-title" class="hero__title"></h1>
+            <div class="hero__buttons">
+                <button class="hero__button play" onclick="playMovie()">► Play</button>
+                <button class="hero__button info">ⓘ More Info</button>
+            </div>
+            <p id="hero-desc" class="hero__description"></p>
+        </div>
+        <div class="hero--fadeBottom"></div>
+    </header>
+
+    <main class="main-content">
+        <section class="row">
+            <h2 class="row__title">Top 10 in India Today</h2>
+            <div class="row__posters">
+                <div class="movie__card rank__container">
+                    <span class="rank__number">1</span>
+                    <img class="row__poster" src="images/devara.jpg" alt="Devara">
+                    <h3 class="movie__card-title">Devara</h3>
+                </div>
+                <div class="movie__card rank__container">
+                    <span class="rank__number">2</span>
+                    <img class="row__poster" src="images/goat.jpg" alt="The GOAT">
+                    <h3 class="movie__card-title">The GOAT</h3>
+                </div>
+                <div class="movie__card rank__container">
+                    <span class="rank__number">3</span>
+                    <img class="row__poster" src="images/KA.jpeg" alt="KA">
+                    <h3 class="movie__card-title">KANTHARA</h3>
+                </div>
+                <div class="movie__card rank__container">
+                    <span class="rank__number">4</span>
+                    <img class="row__poster" src="images/Hit3.jpg" alt="Hit 3">
+                    <h3 class="movie__card-title">Hit 3</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="row">
+            <h2 class="row__title">Trending Now</h2>
+            <div class="row__posters">
+                <div class="movie__card">
+                    <img class="row__poster" src="images/GC.jpeg" alt="Game Changer" onclick="https://www.youtube.com/watch?v=zHiKFSBO_JE">
+                    <h3 class="movie__card-title">Game Changer</h3>
+                </div>
+                <div class="movie__card">
+                    <img class="row__poster" src="images/Dh.jpeg" alt="Dushasana">
+                    <h3 class="movie__card-title">Dhurandhar</h3>
+                </div>
+                <div class="movie__card">
+                    <img class="row__poster" src="images/beast.jpg" alt="Beast">
+                    <h3 class="movie__card-title">Beast</h3>
+                </div>
+                <div class="movie__card">
+                    <img class="row__poster" src="images/good.jpg" alt="Good Bad Ugly">
+                    <h3 class="movie__card-title">Good Bad Ugly</h3>
+                </div>
+                <div class="movie__card">
+                    <img class="row__poster" src="images/hi nanna.jpg" alt="Hi Nanna">
+                    <h3 class="movie__card-title">Hi Nanna</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="videoOverlay" class="video-overlay">
+        <span class="close-video" onclick="closeVideo()">&times;</span>
+        <div class="video-container">
+            <video id="mainVideo" controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
